@@ -4,7 +4,7 @@
   <title>CLAY1201</title>
   <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 
-  <style>
+<style>
   body{
     min-height: 30em;
     background: black;
@@ -15,7 +15,7 @@
   }
   .intro {
     color: white;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: 'Ubuntu Mono', monospace;
   }
   .bg {
@@ -30,9 +30,12 @@
     width: auto;
     margin: 0px 30%;
   }
+  .mt--1 {
+    margin-top: -1px;
+  }
   @media (min-width: 1366px) {
     .logo {
-      width: 25%;
+      width: 20%;
       margin: 0px 35%;
     }
   }
@@ -40,16 +43,18 @@
     color: white;
     text-decoration: none;
   }
+  .red {
+    color: red;
+  }
+
 </style>
 </head>
 
 <body>
 <div class="container bg">
   <div class="center">
-
     <br>
-    <br><br><br>
-    <img class="logo" src="https://i.ibb.co/NLfqrtT/logo-mini.png" alt="CLAY1201" border="0">
+    <img class="logo" src="logo/logo-mini.png" alt="CLAY1201" border="0">
     <p class="intro">
       Hey, guys. A lot of you seem to have some spare time...
     </p>
@@ -61,26 +66,36 @@
     </p>
 
     <p class="intro">
-      There is a hidden text in this message. Find it and you will have a chance to win.
+      There is a hidden message in this page. Find it and you will have a chance to win.
     </p>
     <p class="intro">
-      We are looking forward to see your way through our test.
+      We are looking forward to see your way through our quest.
     </p>
     <p class="intro">
       Good Luck.
     </p>
-    <p class="intro">
-      CLAY1201
+    <p class="intro mt--1">
+      ~ No system <span class="red">is safe ~</span>
     </p>
-    <span class="hidden-text">https://i.ibb.co/hBSR4ts/secretpassword.jpg</span>
-    <br>
-    
-    <br>
     <a class="intro" href="https://yadi.sk/d/Bl8OHcc0ZuL0cA">Proceed to first step</a>
     <br>
     <br>
-    <br>
+    <span class="hidden-text">https://i.ibb.co/hBSR4ts/secretpassword.jpg</span>
+    <p class="intro mt--1">
+      CLAY 1201
+    </p>
+    <iframe src="audio/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <audio id='aud' loop volume="0.01">
+      <source src="audio/music.ogg" type="audio/ogg">
+      <source src="audio/music.mp3" type="audio/mpeg">
+    </audio>
   </div>
 </div>
+<script>
+  var x = document.getElementById('aud')
+  x.autoplay = true
+  x.volume = 0.04
+  x.load()
+</script>
 </body>
 </html>
