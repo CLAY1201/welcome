@@ -7,19 +7,22 @@
 <style>
   body{
     min-height: 30em;
-    background: black!important;
+    background: black;
   }
   .center {
     margin: 0px auto;
     width: 70%;
   }
   .intro {
-    color: white!important;
+    color: white;
     font-size: 1.3em;
     font-family: 'Ubuntu Mono', monospace;
   }
+  .bg {
+    background-color: black;
+  }
   .hidden-text {
-    color: black!important;
+    color: var(--text-color);
     font-size: 1em;
     font-family: 'Ubuntu Mono', monospace;
   }
@@ -37,18 +40,26 @@
     }
   }
   .link {
-    color: white!important;
+    color: white;
     text-decoration: none;
   }
   .red {
-    color: red!important;
+    color: red;
+  }
+  root: {
+    --text-color: black;
+  }
+  @media (prefers-dark-interface) {
+    root: {
+      --text-color: black;
+    }
   }
 
 </style>
 </head>
 
 <body>
-<div class="container">
+<div class="container bg">
   <div class="center">
     <br>
     <img class="logo" src="logo/logo-mini.png" alt="CLAY1201" border="0">
